@@ -100,15 +100,13 @@
             <td>${booking.status}</td> 
             <td>
 <select onchange="updateStatus(${index}, this.value)">
-  <option value="Pending" ${booking.status === 'Pending' ? 'selected' : ''}>Pending</option>
-  <option value="Completed" ${booking.status === 'Completed' ? 'selected' : ''}>Completed</option>
-  <option value="Declined" ${booking.status === 'Declined' ? 'selected' : ''}>Declined</option>
+<option value="Pending" ${booking.status === 'Pending' ? 'selected' : ''}>Pending</option>
+<option value="Completed" ${booking.status === 'Completed' ? 'selected' : ''}>Completed</option>
+<option value="Declined" ${booking.status === 'Declined' ? 'selected' : ''}>Declined</option>
 </select>
 </td>
-
-            
-            <td>${booking.message || ''}</td>
-          `;
+<td>${booking.message || ''}</td>
+`;
           body.appendChild(row);
         });
       } catch (error) {
