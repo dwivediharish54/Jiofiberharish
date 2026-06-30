@@ -30,7 +30,22 @@
         <h2>All bookings in one place.</h2>
         <p>Only authenticated admin users can see this page.</p>
       </div>
+ <div class="stats-grid" style="display:flex;gap:15px;margin:20px 0;">
+  <div style="flex:1;padding:15px;background:#e8f5e9;border-radius:8px;text-align:center;">
+    <h3 id="totalCompleted">0</h3>
+    <p>Total Completed</p>
+  </div>
 
+  <div style="flex:1;padding:15px;background:#fff8e1;border-radius:8px;text-align:center;">
+    <h3 id="totalPending">0</h3>
+    <p>Total Pending</p>
+  </div>
+
+  <div style="flex:1;padding:15px;background:#ffebee;border-radius:8px;text-align:center;">
+    <h3 id="totalDeclined">0</h3>
+    <p>Total Declined</p>
+  </div>
+</div>
       <div class="table-wrapper">
         <table class="dashboard-table" id="appointmentsTable">
           <thead>
@@ -49,22 +64,7 @@
           </thead>
           <tbody id="appointmentsBody"></tbody>
         </table>
-        <div class="stats-grid" style="display:flex;gap:15px;margin:20px 0;">
-  <div style="flex:1;padding:15px;background:#e8f5e9;border-radius:8px;text-align:center;">
-    <h3 id="totalCompleted">0</h3>
-    <p>Total Completed</p>
-  </div>
-
-  <div style="flex:1;padding:15px;background:#fff8e1;border-radius:8px;text-align:center;">
-    <h3 id="totalPending">0</h3>
-    <p>Total Pending</p>
-  </div>
-
-  <div style="flex:1;padding:15px;background:#ffebee;border-radius:8px;text-align:center;">
-    <h3 id="totalDeclined">0</h3>
-    <p>Total Declined</p>
-  </div>
-</div>
+       
         <p class="empty-state hidden" id="emptyAppointments">No appointment requests yet.</p>
       </div>
     </section>
