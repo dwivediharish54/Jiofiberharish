@@ -58,6 +58,8 @@ function renderDashboard() {
       <td>${booking.serviceType}</td>
       <td>${booking.preferredDate}</td>
       <td>${booking.preferredTime}</td>
+      <td>${booking.address || '-'}</td>
+<td>${new Date(booking.createdAt).toLocaleString()}</td>
       <td><span class="status-pill ${booking.status === 'Completed' ? 'status-completed' : 'status-pending'}">${booking.status}</span></td>
       <td>
         <button class="action-button action-complete" data-index="${index}">${booking.status === 'Completed' ? 'Reopen' : 'Complete'}</button>
