@@ -105,6 +105,24 @@ app.post('/api/bookings', async (req, res) => {
   await saveBookings(bookings);
   res.status(201).json({ success: true });
 });
+app.post('/admin/update-status', async (req, res) => {
+  try {
+    const { index, status } = req.body;
+
+    const bookings = await loadBookings();
+
+    bookings[index].status = status;
+
+    await fs.writeFile(
+      BOOKINGS_FILE,
+      JSON.stringify(bookings, null, 2)
+    );
+
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ success: false });
+  }
+});
 
 app.listen(PORT, HOST, () => {
   console.log(`Server running at http://${HOST}:${PORT}/`);
