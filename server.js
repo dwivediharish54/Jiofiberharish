@@ -96,10 +96,10 @@ app.post('/api/bookings', async (req, res) => {
     serviceType: values.serviceType,
     preferredDate: values.preferredDate,
     preferredTime: values.preferredTime,
-    message: values.message,
-    address: values.address,
-    status: 'Pending',
     createdAt: new Date().toISOString(),
+    address: values.address,
+    message: values.message,
+    status: 'Pending',
   };
   const bookings = await loadBookings();
   bookings.push(booking);
