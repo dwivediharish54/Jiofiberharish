@@ -9,8 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const HOST = process.env.HOST || '0.0.0.0';
 
-const ADMIN_USER = process.env.ADMIN_USER || 'admin';
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'JioAdmin@1234';
+const ADMIN_USER = process.env.ADMIN_USER || 'harish';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'Ritesh@2004';
 const SESSION_SECRET = process.env.SESSION_SECRET || 'change_this_secret';
 const BOOKINGS_FILE = path.join(__dirname, 'bookings.json');
 
